@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model report {
+  id        Int      @id @default(autoincrement())
+  name      String
+  latitude  Float
+  longitude Float
+  timestamp DateTime @default(now())
+  status    String   @default("unrescued")
+}
+
+model user {
+  id       Int    @id @default(autoincrement())
+  email    String @unique(map: "User_email_key")
+  name     String
+  password String
+}
