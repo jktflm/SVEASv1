@@ -13,7 +13,7 @@ export const authOptions = {
         CredentialsProvider({
             name: 'Credentials',
             credentials: {
-                name: { label: 'Name', type: 'text', placeholder: 'jake'},
+                name: { label: 'Name', type: 'text', placeholder: 'Username'},
                 password: { Label: 'Password', type: 'password'},
             },
             async authorize(credentials, req) {
