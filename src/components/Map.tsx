@@ -8,10 +8,10 @@ import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 import axios from 'axios';
-import { Report } from '@prisma/client';
+import { report } from '@prisma/client';
 import { Decimal } from '@prisma/client/runtime';
 
-async function fetchReports(setData: Dispatch<SetStateAction<Report[]>>) {
+async function fetchReports(setData: Dispatch<SetStateAction<report[]>>) {
   try {
     const response = await axios.get('/api/reports');
     setData(response.data?.data)
@@ -39,7 +39,7 @@ const MapData = () => {
 }
 
 const Map = () => {
-  const [data, setData] = useState<Report[]>([])
+  const [data, setData] = useState<report[]>([])
   const [lat, setLat] = useState<Decimal>()
   const [lng, setLng] = useState<Decimal>()
   const [zoom, setZoom] = useState(13)

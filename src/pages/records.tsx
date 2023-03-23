@@ -3,12 +3,12 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Report } from '@prisma/client'
+import { report } from '@prisma/client'
 
 
 export default function Home() {
   const { data: session, status } = useSession()
-  const [data, setData] = useState<Report[]>([])
+  const [data, setData] = useState<report[]>([])
 
   useEffect(() => {
     (async function fetchReports() {
