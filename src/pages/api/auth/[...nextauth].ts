@@ -13,8 +13,8 @@ export const authOptions = {
         CredentialsProvider({
             name: 'Credentials',
             credentials: {
-                name: { label: 'Name', type: 'text', placeholder: 'Username'},
-                password: { Label: 'Password', type: 'password'},
+                name: {type: 'text', placeholder: 'Username'},
+                password: { Label: 'Password', type: 'password', placeholder: 'Password'},
             },
             async authorize(credentials, req) {
                 try {
@@ -42,6 +42,9 @@ export const authOptions = {
             }
         }),
     ],
+    pages: {
+        signIn: "/signin"
+    },
     callbacks: {
         async jwt({ token, user }: any): Promise<JWT> {
             return { ...token, ...user };

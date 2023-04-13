@@ -35,7 +35,7 @@ export default function Home() {
           <nav className='nav'>
             <ul className='nav-list'>
               <li className='dashboard-title'><Link href='/'>SVEAS - Dashboard</Link></li>
-              <li>Hello, { session?.user?.name}</li>
+              <li>{ session?.user?.name}</li>
               <li><a onClick={() => signOut()} style={{ cursor: 'pointer'}}>Logout</a></li>
               <li><Link href='/records'>Record of Accidents</Link></li>
               <li><Link href='/about'>About</Link></li>

@@ -45,7 +45,7 @@ export default function Home() {
                   <th className='border p-4'>Rescue ID</th>
                   <th className='border p-4'>Date</th>
                   <th className='border p-4'>Boat Operator</th>
-                  <th className='border p-4'>Latitutde</th>
+                  <th className='border p-4'>Latitude</th>
                   <th className='border p-4'>Longitude</th>
                   <th className='border p-4'>Status</th>
                 </tr>
