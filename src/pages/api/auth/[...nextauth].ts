@@ -42,9 +42,9 @@ export const authOptions = {
             }
         }),
     ],
-    pages: {
-        signIn: "/signin"
-    },
+    // pages: {
+    //     signIn: "/signin"
+    // },
     callbacks: {
         async jwt({ token, user }: any): Promise<JWT> {
             return { ...token, ...user };
