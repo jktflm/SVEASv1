@@ -1,10 +1,7 @@
 import NextAuth, { Session } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
-import { PrismaClient } from '@prisma/client' 
+import { prisma } from '../../../../live/prisma'
 import { JWT } from "next-auth/jwt"
-
-
-const prisma = new PrismaClient()
 
 export const authOptions = {
     secret: process.env.NextAuth_SECRET,
