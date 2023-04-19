@@ -8,7 +8,9 @@ export default function Home() {
 
   return (
     <>
-      <form method='post' action='/api/login'>
+    <div>
+
+      <form method='post' action='/api/login' className = "form">
         <label>
             Username
             <input name='username' type='text' value={username} onChange={(event) => setUsername(event.currentTarget.value)}/>
@@ -19,6 +21,7 @@ export default function Home() {
         </label>
         <button type='submit'>Login</button>
       </form>
+      </div>
     </>
   )
 }

@@ -31,14 +31,13 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div>
-        
           <nav className='nav'>
             <ul className='nav-list'>
-              <li className='dashboard-title'><Link href='/'>SVEAS - Dashboard</Link></li>
+              <li className='dashboard-title'><Link href='/'>Dashboard</Link></li>
               <li>{ session?.user?.name}</li>
-              <li><a onClick={() => signOut()} style={{ cursor: 'pointer'}}>Logout</a></li>
               <li><Link href='/records'>Record of Accidents</Link></li>
               <li><Link href='/about'>About</Link></li>
+              <li><a onClick={() => signOut()} style={{ cursor: 'pointer'}}>Logout</a></li>
             </ul>
           </nav>
           <Map />

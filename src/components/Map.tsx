@@ -10,6 +10,7 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 import axios from 'axios';
 import { report } from '@prisma/client';
 import { Decimal } from '@prisma/client/runtime';
+import moment from "moment";
 
 async function fetchReports(setData: Dispatch<SetStateAction<report[]>>) {
   try {
@@ -42,7 +43,7 @@ const Map = () => {
   const [data, setData] = useState<report[]>([])
   const [lat, setLat] = useState<Decimal>()
   const [lng, setLng] = useState<Decimal>()
-  const [zoom, setZoom] = useState(13)
+  const [zoom, setZoom] = useState(12)
 
   const onRescue = async ({id, status}: any) => {
     try {
@@ -73,7 +74,7 @@ const Map = () => {
               <p>{d.name}</p>
               <p>{d.latitude}</p>
               <p>{d.longitude}</p>
-              <p>{String(d.timestamp)}</p>
+              <p>{String(moment(d.timestamp).format('dddd MMM DD YYYY hh:mm:ss'))}</p>
               { d.status == 'unrescued' && <button className='rounded-full bg-red-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'ongoing'})}>Rescue</button>}
               { d.status === 'ongoing' && <button className='rounded-full bg-green-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'rescued'})}>Resolve</button> }
             </div>

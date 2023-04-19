@@ -1,6 +1,8 @@
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import logo from "../styles/rescue.png"
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -24,7 +26,21 @@ export default function SignIn() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className = "bg">
+    <div className = "margin">
+      <div className = "logo-container title-container">
+        <div>
+      <Image src= {logo} width={128} height={128} alt="logo"></Image>
+      </div>
+      <div>
+      <h1 className = "title"> Small Vessel</h1>
+      <h1 className = "title"> Emergency </h1>
+      <h1 className = "title"> Alert System</h1>
+      </div>
+      </div>
+    <form onSubmit={handleSubmit} className = "form">
+      <h1>Authorized Personnel</h1>
+      <div className = "form-input">
       <label>
         
         <input
@@ -35,6 +51,8 @@ export default function SignIn() {
           placeholder = "Username"
         />
       </label>
+      </div>
+
       <label>
         <input
           type="password"
@@ -46,5 +64,8 @@ export default function SignIn() {
       </label>
       <button type="submit">Sign In</button>
     </form>
+    </div>
+    </div>
+    
   );
 }
