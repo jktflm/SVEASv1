@@ -13,7 +13,8 @@ model report {
   latitude  Float
   longitude Float
   timestamp DateTime @default(now())
-  status    String   @default("unrescued")
+  status    String   @default("Unrescued")
+  link      String   @default("")
 }
 
 model user {

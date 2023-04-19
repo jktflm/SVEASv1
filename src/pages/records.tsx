@@ -48,6 +48,7 @@ export default function Home() {
                   <th className='border p-4'>Boat Operator</th>
                   <th className='border p-4'>Latitude</th>
                   <th className='border p-4'>Longitude</th>
+                  <th className='border p-4'>Map Link</th>
                   <th className='border p-4'>Status</th>
                 </tr>
               </thead>
@@ -58,6 +59,7 @@ export default function Home() {
                     <td className='border p-2'>{String(d.name)}</td>
                     <td className='border p-2'>{String(d.latitude)}</td>
                     <td className='border p-2'>{String(d.longitude)}</td>
+                    <td className='border p-2'>{String(d.link)}</td>
                     <td className='border p-2'>{String(d.status)}</td>
                 </tr>
                 ))}
