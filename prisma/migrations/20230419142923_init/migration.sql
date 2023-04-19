@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE `report` ADD COLUMN `link` VARCHAR(191) NOT NULL DEFAULT '';
