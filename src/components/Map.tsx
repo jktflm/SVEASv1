@@ -11,6 +11,7 @@ import axios from 'axios';
 import { report } from '@prisma/client';
 import { Decimal } from '@prisma/client/runtime';
 import moment from "moment";
+import  Link from 'next/link'
 
 async function fetchReports(setData: Dispatch<SetStateAction<report[]>>) {
   try {
@@ -75,8 +76,12 @@ const Map = () => {
               <p>{d.latitude}</p>
               <p>{d.longitude}</p>
               <p>{String(moment(d.timestamp).format('dddd MMM DD YYYY hh:mm:ss'))}</p>
+              <div>
               { d.status == 'Unrescued' && <button className='rounded-full bg-red-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'ongoing'})}>Rescue</button>}
               { d.status === 'ongoing' && <button className='rounded-full bg-green-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'rescued'})}>Resolve</button> }
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <Link href={d.link}  target="_blank">Map Link</Link>
+              </div>
             </div>
           </Popup>
       </Marker>)

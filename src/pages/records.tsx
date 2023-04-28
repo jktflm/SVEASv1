@@ -59,7 +59,7 @@ export default function Home() {
                     <td className='border p-2'>{String(d.name)}</td>
                     <td className='border p-2'>{String(d.latitude)}</td>
                     <td className='border p-2'>{String(d.longitude)}</td>
-                    <td className='border p-2'>{String(d.link)}</td>
+                    <td className='border p-2'><Link href={d.link}  target="_blank">Map Link</Link></td>
                     <td className='border p-2'>{String(d.status)}</td>
                 </tr>
                 ))}
