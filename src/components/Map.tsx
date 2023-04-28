@@ -67,7 +67,7 @@ const Map = () => {
     <MapContainer center={[12.6085, 122.0724]} zoom={zoom} scrollWheelZoom={true} style={{height: "100vh", width: "100%"}}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
       <MapData />
-      {data && data.map((d, i) => (d.status === 'unrescued' || d.status === 'ongoing') && (
+      {data && data.map((d, i) => (d.status === 'Unrescued' || d.status === 'ongoing') && (
         <Marker key={i} position={{'lat': d.latitude, 'lng': d.longitude}}>
           <Popup>
             <div>
@@ -75,7 +75,7 @@ const Map = () => {
               <p>{d.latitude}</p>
               <p>{d.longitude}</p>
               <p>{String(moment(d.timestamp).format('dddd MMM DD YYYY hh:mm:ss'))}</p>
-              { d.status == 'unrescued' && <button className='rounded-full bg-red-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'ongoing'})}>Rescue</button>}
+              { d.status == 'Unrescued' && <button className='rounded-full bg-red-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'ongoing'})}>Rescue</button>}
               { d.status === 'ongoing' && <button className='rounded-full bg-green-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'rescued'})}>Resolve</button> }
             </div>
           </Popup>

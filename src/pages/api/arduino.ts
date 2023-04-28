@@ -29,8 +29,6 @@ export default async function handler(
         console.log(err)
         return res.status(400).json({ message: 'Bad Request'})
 
-    } finally {
-        prisma.$disconnect()
-    }
+    } 
 
 }

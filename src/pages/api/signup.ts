@@ -26,9 +26,7 @@ export default async function handler(
     } catch (err) {
       console.log(err)
       return res.status(500).json({ message: "An error occured"})
-    } finally {
-      await prisma.$disconnect()
-    }
+    } 
     console.log(req.body)
   res.redirect('/api/auth/signin')
 }

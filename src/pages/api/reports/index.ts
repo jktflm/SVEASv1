@@ -21,8 +21,6 @@ export default async function handler(
     } catch (err) {
         console.log(err)
         return res.status(404).json({ message: 'Not found'})
-    } finally {
-        prisma.$disconnect()
-    }
+    } 
   
 }

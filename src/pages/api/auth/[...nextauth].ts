@@ -31,9 +31,7 @@ export const authOptions = {
                     }
                 } catch (err) {
                     console.log(err)
-                } finally {
-                    await prisma.$disconnect()
-                }
+                } 
 
                 return null
             }
