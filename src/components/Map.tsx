@@ -73,6 +73,7 @@ const Map = () => {
           <Popup>
             <div>
               <p>{d.name}</p>
+              <p>{d.timesent}</p>
               <p>{d.latitude}</p>
               <p>{d.longitude}</p>
               <p>{String(moment(d.timestamp).format('dddd MMM DD YYYY hh:mm:ss'))}</p>

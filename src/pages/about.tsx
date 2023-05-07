@@ -19,8 +19,7 @@ export default function Home() {
               <li className='nav-title'>About SVEAS</li>
             </ul>
           </nav>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi beatae esse amet totam quia animi, necessitatibus qui ratione, ab quasi dolorem. Velit error aspernatur sint ad voluptas consequuntur labore illo?</p>
-
+          <p>S.V.E.A.S. is a notification system that allows transmission of SMS data using a transmitter device to be used in case of accident which is connected to the notification device that is assigned to the rescue team that can immediately recognize as an alert notification of possible accident in the sea and providing accurate information such as the exact coordinates of the area of accident. </p>
         </div>
       </>
       

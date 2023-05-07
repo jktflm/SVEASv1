@@ -45,6 +45,8 @@ export default function Home() {
                 <tr>
                   <th className='border p-4'>Rescue ID</th>
                   <th className='border p-4'>Date</th>
+                  <th className='border p-4'>Time Sent</th>
+                  <th className='border p-4'>Time Received</th>
                   <th className='border p-4'>Boat Operator</th>
                   <th className='border p-4'>Latitude</th>
                   <th className='border p-4'>Longitude</th>
@@ -55,7 +57,9 @@ export default function Home() {
               <tbody>
                 {data?.map((d, i) => (<tr key={i}>
                     <td className='border p-2'>{d.id}</td>
-                    <td className='border p-2'>{String(moment(d.timestamp).format('dddd MMM DD YYYY hh:mm:ss'))}</td>
+                    <td className='border p-2'>{String(moment(d.timestamp).format('dddd MMM DD YYYY'))}</td>
+                    <td className='border p-2'>{String(d.timesent)}</td>
+                    <td className='border p-2'>{String(moment(d.timestamp).format('hh:mm:ss'))}</td>
                     <td className='border p-2'>{String(d.name)}</td>
                     <td className='border p-2'>{String(d.latitude)}</td>
                     <td className='border p-2'>{String(d.longitude)}</td>
