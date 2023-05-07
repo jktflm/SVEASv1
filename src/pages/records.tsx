@@ -57,7 +57,7 @@ export default function Home() {
               <tbody>
                 {data?.sort(d=>d.id).map((d, i) => (<tr key={d.id}>
                     <td className='border p-2'>{d.id}</td>
-                    <td className='border p-2'>{String(moment(d.timestamp).format('dddd MMM DD YYYY'))}</td>
+                    <td className='border p-2'>{String(moment(d.timestamp).format('dddd MMM DD, YYYY'))}</td>
                     <td className='border p-2'>{String(d.timesent)}</td>
                     <td className='border p-2'>{String(moment(d.timestamp).format('HH:mm:ss'))}</td>
                     <td className='border p-2'>{String(d.name)}</td>

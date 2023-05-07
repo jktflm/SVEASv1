@@ -76,7 +76,7 @@ const Map = () => {
               <p>Time Sent: {d.timesent}</p>
               <p>Latitude: {d.latitude}</p>
               <p>Longitude: {d.longitude}</p>
-              <p>Date: {String(moment(d.timestamp).format('dddd MMM DD YYYY hh:mm:ss'))}</p>
+              <p>Date: {String(moment(d.timestamp).format('dddd MMM DD, YYYY hh:mm:ss'))}</p>
               <div>
               { d.status == 'Unrescued' && <button className='rounded-full bg-red-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'ongoing'})}>Rescue</button>}
               { d.status === 'ongoing' && <button className='rounded-full bg-green-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'rescued'})}>Resolve</button> }
