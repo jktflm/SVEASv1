@@ -13,12 +13,12 @@ export default async function handler(
     const { name, lat, lon, tim } = req.query
     const latitude = parseFloat(lat as string)
     const longitude = parseFloat(lon as string)
-    const timesent = parseFloat(tim as string)
+    const timesent = tim
     try {
         const report = await prisma.report.create({
             data: {
                 name: name as string,
-                timesent,
+                timesent: timesent as string,
                 latitude,
                 longitude,
                 link: `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}&zoom=14&markers=${latitude},${longitude}`
