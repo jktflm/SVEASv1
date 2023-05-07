@@ -15,7 +15,7 @@ export default async function handler(
   res: NextApiResponse<ReportsResponse>
 ) {
     try {
-        const reports = await prisma.report.findMany()
+        const reports = await prisma.report.findMany({orderBy:{id:"asc"}})
         console.log(reports)
         return res.status(200).json({ data: reports, message: 'Success'})
     } catch (err) {
