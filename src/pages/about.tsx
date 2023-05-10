@@ -19,14 +19,14 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div>
+        <div className="aboutbg">
           <nav className='nav'>
             <ul className='nav-list'>
               <li><Link href='/'>Back</Link></li>
               <li className='nav-title'>About SVEAS</li>
             </ul>
           </nav>
-          
+          <div>
           <p className="aboutt">S.V.E.A.S. is a notification system that allows transmission of SMS data using a transmitter device to be used in case of accident which is connected to the notification device that is assigned to the rescue team that can immediately recognize as an alert notification of possible accident in the sea and providing accurate information such as the exact coordinates of the area of accident.</p>
           <p className="devs">Developers of the System</p>
           <div className="grid-container">
@@ -60,6 +60,7 @@ export default function Home() {
                 <div>Barron Joshua Volante</div>
                 <div>Documentation</div>
                 </div>  
+          </div>
           </div>
         </div>
       </>

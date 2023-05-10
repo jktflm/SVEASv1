@@ -14,7 +14,7 @@ html, body {
 }
 
 .nav {
-    background-color: rgb(93, 114, 224);
+    background-color: #262A56;
     height: 48px;
     display: flex;
     align-items: center;
@@ -182,4 +182,13 @@ h1{
     margin: 2rem 20rem 0 20rem;
     font-size: large;
 
+}
+.aboutbg{
+    background-color: #E3CCAE;
+}
+.recordsbg{
+    background-color: #E3CCAE;
+}
+.dashboard{
+    font-weight: bold;
 }

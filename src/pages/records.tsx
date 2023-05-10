@@ -39,8 +39,8 @@ export default function Home() {
               <li className='nav-title'>Records of Accidents</li>
             </ul>
           </nav>
-          <div className='flex'>
-            <table className='flex-1 table-auto border m-8'>
+          <div className='flex recordsbg'>
+            <table className='flex-1 table-auto border m-8 table'>
               <thead>
                 <tr>
                   <th className='border p-4'>Rescue ID</th>
