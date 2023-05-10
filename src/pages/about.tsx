@@ -1,6 +1,13 @@
 import Head from 'next/head'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from 'next/link'
+import Image from "next/image";
+import ed from "../styles/ed.jpg"
+import jake from "../styles/jake.jpg"
+import gieno from "../styles/gieno.jpg"
+import gio from "../styles/gio.jpg"
+import joshu from "../styles/joshu.jpg"
+import anica from "../styles/anica.jpg"
 export default function Home() {
   const { data: session, status } = useSession()
   if (status === 'authenticated') {
@@ -19,7 +26,41 @@ export default function Home() {
               <li className='nav-title'>About SVEAS</li>
             </ul>
           </nav>
-          <p>S.V.E.A.S. is a notification system that allows transmission of SMS data using a transmitter device to be used in case of accident which is connected to the notification device that is assigned to the rescue team that can immediately recognize as an alert notification of possible accident in the sea and providing accurate information such as the exact coordinates of the area of accident. </p>
+          
+          <p className="aboutt">S.V.E.A.S. is a notification system that allows transmission of SMS data using a transmitter device to be used in case of accident which is connected to the notification device that is assigned to the rescue team that can immediately recognize as an alert notification of possible accident in the sea and providing accurate information such as the exact coordinates of the area of accident.</p>
+          <p className="devs">Developers of the System</p>
+          <div className="grid-container">
+              <div className="grid-item">
+                <Image src= {jake} width={300} height={300} alt="logo"></Image>
+                <div>Jake Faalam</div>
+                <div>Developer</div>
+                </div>
+              <div className="grid-item">
+                <Image src= {ed} width={300} height={300} alt="logo"></Image>
+                <div>Edrian Famadico</div>
+                <div>Project Leader</div>
+                </div>
+              <div className="grid-item">
+                <Image src= {gieno} width={300} height={300} alt="logo"></Image>
+                <div>Gieno Hallig</div>
+                <div>Hardware Designer</div>
+                </div>  
+              <div className="grid-item">
+                <Image src= {anica} width={300} height={300} alt="logo"></Image>
+                <div>Anica Pamela Manahan</div>
+                <div>Documentation</div>
+                </div>
+              <div className="grid-item">
+                <Image src= {gio} width={300} height={300} alt="logo"></Image>
+                <div>Gio Ruel Mercene</div>
+                <div>Hardware Designer</div>
+                </div>
+              <div className="grid-item">
+                <Image src= {joshu} width={300} height={300} alt="logo"></Image>
+                <div>Barron Joshua Volante</div>
+                <div>Documentation</div>
+                </div>  
+          </div>
         </div>
       </>
       

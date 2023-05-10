@@ -152,3 +152,34 @@ h1{
     right: 35px;
     }
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem 18rem 0 18rem;
+    padding: 1px;
+  }
+  
+  .grid-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  .devs{
+    margin-top: 1rem;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+  }
+.aboutt{
+    text-align: center;
+    font-weight: 600;
+    margin: 2rem 20rem 0 20rem;
+    font-size: large;
+
+}
