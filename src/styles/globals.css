@@ -32,6 +32,8 @@ html, body {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    overflow: auto;
+    max-width: 100%;
 }
 
 a {
@@ -185,11 +187,13 @@ h1{
 }
 .aboutbg{
     background-color: #E3CCAE;
+    max-width: 100%;
+    overflow: auto;
 }
 .recordsbg{
     background-color: #E3CCAE;
     border-color: #000000;
-    max-height: 100vh;
+    max-height: 100%;
     max-width: 100%;
     overflow: auto;
     
@@ -203,4 +207,39 @@ h1{
 }
 .map-marker{
     font-weight: bold;
+}
+
+.hidden-text {
+    display: block;
+  }
+  
+  @media (max-width: 1056px) {
+    .hidden-text {
+      margin: 1rem;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem 18rem 0 18rem;
+        padding: 1px;
+        
+      }
+    
+  }
+  @media (max-width: 900px){
+    .grid-container{
+        margin: 0;
+    }
+
+  }
+  @media (max-width: 420px){
+    .dashboard-title{
+        display:none;
+    }
+    
+  }
+
+table,th,td{
+    border-color: black;
+    
 }

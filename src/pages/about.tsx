@@ -27,10 +27,10 @@ export default function Home() {
             </ul>
           </nav>
           <div>
-          <p className="aboutt">S.V.E.A.S. is a notification system that allows transmission of SMS data using a transmitter device to be used in case of accident which is connected to the notification device that is assigned to the rescue team that can immediately recognize as an alert notification of possible accident in the sea and providing accurate information such as the exact coordinates of the area of accident.</p>
+          <p className="aboutt hidden-text">S.V.E.A.S. is a notification system that allows transmission of SMS data using a transmitter device to be used in case of accident which is connected to the notification device that is assigned to the rescue team that can immediately recognize as an alert notification of possible accident in the sea and providing accurate information such as the exact coordinates of the area of accident.</p>
           <p className="devs">Developers of the System</p>
           <div className="grid-container">
-              <div className="grid-item">
+              <div className="grid-item small-screen">
                 <Image src= {jake} width={300} height={300} alt="logo"></Image>
                 <div>Jake Faalam</div>
                 <div>Developer</div>

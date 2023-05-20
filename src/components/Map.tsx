@@ -61,7 +61,12 @@ const Map = () => {
     }
   }
   useEffect(() => {
+    // setInterval(()=>{
+    //   fetchReports(setData)
+    //   console.log("hello")
+    // },10000 )
     fetchReports(setData)
+    
   }, [])
   return (
     <>

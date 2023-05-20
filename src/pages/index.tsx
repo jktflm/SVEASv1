@@ -33,9 +33,9 @@ export default function Home() {
         <div>
           <nav className='nav'>
             <ul className='nav-list'>
-              <li className='dashboard-title'><Link href='/' className="dashboard">Dashboard</Link></li>
+              <li className='dashboard-title'><Link href='/' className="dashboard">SVEAS Dashboard</Link></li>
               {/* <li>{ session?.user?.name}</li> */}
-              <li><Link href='/records'>Record of Accidents</Link></li>
+              <li><Link href='/records'>Records</Link></li>
               <li><Link href='/about'>About</Link></li>
               <li><a onClick={() => signOut()} style={{ cursor: 'pointer'}}>Logout</a></li>
             </ul>
