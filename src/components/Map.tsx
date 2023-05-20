@@ -72,11 +72,11 @@ const Map = () => {
         <Marker key={i} position={{'lat': d.latitude, 'lng': d.longitude}}>
           <Popup>
             <div>
-              <p>Boat Operator: {d.name}</p>
-              <p>Time Sent: {d.timesent}</p>
-              <p>Latitude: {d.latitude}</p>
-              <p>Longitude: {d.longitude}</p>
-              <p>Date: {String(moment(d.timestamp).format('dddd MMM DD, YYYY hh:mm:ss'))}</p>
+              <p className='map-marker'>Boat Operator: {d.name}</p>
+              <p className='map-marker'>Time Sent: {d.timesent}</p>
+              <p className='map-marker'>Latitude: {d.latitude}</p>
+              <p className='map-marker'>Longitude: {d.longitude}</p>
+              <p className='map-marker'>Date: {String(moment(d.timestamp).format('dddd MMM DD, YYYY hh:mm:ss'))}</p>
               <div>
               { d.status == 'Unrescued' && <button className='rounded-full bg-red-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'Ongoing'})}>Rescue</button>}
               { d.status === 'Ongoing' && <button className='rounded-full bg-green-500 px-4 py-1 text-white' onClick={(e) => onRescue({id: d.id, status: 'Rescued'})}>Resolve</button> }

@@ -189,15 +189,18 @@ h1{
 .recordsbg{
     background-color: #E3CCAE;
     border-color: #000000;
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: auto;
+    
 }
 .dashboard{
     font-weight: bold;
 }
 
-table{
-    border: 1px solid black;
-}
-
 .map-link{
+    font-weight: bold;
+}
+.map-marker{
     font-weight: bold;
 }
