@@ -33,7 +33,7 @@ export default function Home() {
               <div className="grid-item small-screen">
                 <Image src= {jake} width={300} height={300} alt="logo"></Image>
                 <div>Jake Faalam</div>
-                <div>Developer</div>
+                <div>Web Developer</div>
                 </div>
               <div className="grid-item">
                 <Image src= {ed} width={300} height={300} alt="logo"></Image>
