@@ -243,3 +243,7 @@ table,th,td{
     border-color: black;
     
 }
+
+.icon-color{
+  color: red;
+}
