@@ -40,7 +40,7 @@ const chooseIcon = (color: "Unrescued"|"Ongoing") => {
   }
   else if (color == "Ongoing"){
   return L.icon({
-    iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+    iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
     iconRetinaUrl: iconRetinaUrl.src,
     shadowUrl: shadowUrl.src,
     iconSize: [25, 41],
